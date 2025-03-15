@@ -1,7 +1,5 @@
 # Lab 11: Future-proofing research
 
-💪 Under development
-
 ## Preparation
 
 - Read/ annotatae: [Recipe \#11](https://qtalr.com/resources/recipes/recipe-11/). You can refer back to this document to help you at any point during this lab activity.
@@ -125,9 +123,11 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/qtalr-r:latest
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/<project_name>:latest
           platforms: linux/amd64,linux/arm64
 ```
+
+Note: Replace `<project_name>` with the name of your project.
 
 4. Before you push your changes to your repository, you will need to add your Docker Hub username and access token as secrets to your repository. To do this, go to your repository on GitHub, click on the 'Settings' tab, and then click on the 'Secrets' link in the left sidebar. Click on the 'New repository secret' button and add the following secrets:
 
